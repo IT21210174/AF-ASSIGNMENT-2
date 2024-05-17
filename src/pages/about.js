@@ -5,13 +5,10 @@ import nasalogo from '../assets/nasa-logo.png';
 import Footer from '../components/Footer'; 
 import Header from '../components/Header';
 
-
-
 const navigation1 = [
   { name: 'Picture Of The Day', href: 'apod' },
   { name: 'Mas Rover Photo', href: 'MasRoverPhoto' },
   { name: 'Epic', href: 'Epic' },
-  
 ];
 const navigation2 = {
   main: [
@@ -86,72 +83,67 @@ const navigation2 = {
     },
   ],
 }
-  export default function Example() {
-    const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  
-    return (
-      <div className="bg-white">
-        <Header navigation1={navigation1} nasalogo={nasalogo} />
 
+export default function Example() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
-
-         {/* NASA API Overview Section */}
+  return (
+    <div className="bg-white text-black">
+      <Header navigation1={navigation1} nasalogo={nasalogo} />
+      
+      {/* NASA API Overview Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 mt-20">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">NASA API Overview</h2>
-        <p className="mb-4">
-          This section contains an introduction to NASA’s application programming interfaces (APIs),
-          some background, and how to set it up.
-        </p>
-        <div className="text-gray-700 space-y-6">
-          <h3 className="text-xl font-semibold">Introduction</h3>
-          <p>
-            APIs provide an interface for machines to talk with each other. NASA’s APIs allow
-            developers to use NASA’s data, such as imagery, for application development.
-          </p>
+        <h2 className="text-4xl font-bold text-blue-500 mb-4 text-center">NASA Data Explorer</h2>
+        <p className="mb-4 text-left" style={{ fontStyle: 'italic' }}>
+    Welcome to the NASA API Portal. Our goal is to make NASA's data, including imagery, easily accessible to application developers. This catalog features a selection of broadly useful and user-friendly APIs, though it does not encompass every NASA API available. In this section, you'll find an introduction to NASA’s application programming interfaces (APIs), some background information, and instructions on how to get started.
+</p>
 
-          <h3 className="text-xl font-semibold">Background</h3>
-          <p>
-            NASA gathers a lot of data - over 15 Terabytes per day! And by a White House mandate, this data
-            is free to the public - in a format useful to you. This is where the APIs come into play.
-          </p>
-          <p>
-            Figuring out the best way to distribute, use, and reuse NASA’s data is a problem. NASA’s APIs
-            provide a solution by lowering the barrier of entry to people outside NASA to easily manipulate
-            and access the public information.
-          </p>
+<div className="text-gray-300 space-y-6" style={{ color: 'black' }}>
+  <h3 className="text-xl font-semibold text-black-500 text-left">1.) Introduction</h3>
+  <p>
+    APIs provide an interface for machines to talk with each other. NASA’s APIs allow
+    developers to use NASA’s data, such as imagery, for application development.
+  </p>
 
-          <h3 className="text-xl font-semibold">Available APIs</h3>
-          <ul className="list-disc pl-5">
-            <li>Near Earth Object Web Service (NeoWs): Access to near Earth asteroid information.</li>
-            <li>Earth Polychromatic Imaging Camera (EPIC): Full disc imagery of the Earth.</li>
-            <li>Earth Observatory Natural Event Tracker (EONET): Prototype web service providing continuously updated natural event metadata, such as storm imagery, gathered from the Earth’s surface.</li>
-            <li>NASA Image and Video Library: Access to the NASA Image and Video Library.</li>
-            <li>Sounds (beta): Access to space sounds via SoundCloud with some of the hassle abstracted away.</li>
-          </ul>
+  <h3 className="text-xl font-semibold text-light-blue-500 text-left">2.) Background</h3>
+  <p>
+    NASA gathers a lot of data - over 15 Terabytes per day! And by a White House mandate, this data
+    is free to the public - in a format useful to you. This is where the APIs come into play.
+    Figuring out the best way to distribute, use, and reuse NASA’s data is a problem. NASA’s APIs
+    provide a solution by lowering the barrier of entry to people outside NASA to easily manipulate
+    and access the public information.
+  </p>
 
-          <h3 className="text-xl font-semibold">How To Set It Up</h3>
-          <p>
-          Head over to api.NASA.gov and follow the applying for an API key link to get your personal API key. The process takes ~5 minutes and NASA will email your key to you.
+  <h3 className="text-xl font-semibold text-light-blue-500 text-left">3.) Available APIs</h3>
+  <ul className="list-disc pl-5">
+    <li>Near Earth Object Web Service (NeoWs): Access to near Earth asteroid information.</li>
+    <li>Earth Polychromatic Imaging Camera (EPIC): Full disc imagery of the Earth.</li>
+    <li>Earth Observatory Natural Event Tracker (EONET): Prototype web service providing continuously updated natural event metadata, such as storm imagery, gathered from the Earth’s surface.</li>
+    <li>NASA Image and Video Library: Access to the NASA Image and Video Library.</li>
+    <li>Sounds (beta): Access to space sounds via SoundCloud with some of the hassle abstracted away.</li>
+  </ul>
 
-          We will be working with these 3 APIs:
-          <ul className="list-disc pl-5">
-            <li>Astronomy Picture Of The Day</li>
-            <li>Earth Observatory Natural Event Tracker (EONET)</li>
-            
-          </ul>
-          </p>
-          <p>
-            Figuring out the best way to distribute, use, and reuse NASA’s data is a problem. NASA’s APIs
-            provide a solution by lowering the barrier of entry to people outside NASA to easily manipulate
-            and access the public information.
-          </p>
+  <h3 className="text-xl font-semibold text-light-blue-500 text-left">4.) How To Set It Up</h3>
+  <p>
+    Head over to api.NASA.gov and follow the applying for an API key link to get your personal API key. The process takes ~5 minutes and NASA will email your key to you.
+  </p>
+  <p>
+    We will be working with these 3 APIs:
+    <ul className="list-disc pl-5">
+      <li>Astronomy Picture Of The Day</li>
+      <li>Earth Observatory Natural Event Tracker (EONET)</li>
+    </ul>
+  </p>
+  <p>
+    Figuring out the best way to distribute, use, and reuse NASA’s data is a problem. NASA’s APIs
+    provide a solution by lowering the barrier of entry to people outside NASA to easily manipulate
+    and access the public information.
+  </p>
+</div>
 
-        </div>
       </section>
 
-
       <Footer navigation={navigation2} />
-
-      </div>
-    )
-  }
+    </div>
+  )
+}

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import backgroundImage1 from '../assets/11-Space-APIs-Because-Space-is-Neat.jpeg';
+import backgroundImage1 from '../assets/pngtree-space-explorer-takes-a-step-onto-the-foreign-terrain-of-an-image_3781864.jpg';
 import Footer from '../components/Footer'; 
 import nasalogo from '../assets/nasa-logo.png';
 
@@ -190,10 +190,10 @@ export default function Example() {
         
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-             NASA APIs 
+             NASA Data Explorer
             </h1>
             <p className="mt-6 text-lg leading-8 text-white">
-            Welcome to the NASA API portal. The objective of this site is to make NASA data, including imagery, eminently accessible to application developers. This catalog focuses on broadly useful and user friendly APIs and does not hold every NASA API.
+            Welcome to NASA Data Explorer, your gateway to the vast universe of NASA's data and imagery. Dive into our user-friendly APIs and unleash the potential of space science in your applications. Explore, innovate, and reach for the stars with us!
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
