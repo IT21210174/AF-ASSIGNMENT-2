@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import nasalogo from '../assets/nasa-logo.png'; 
 import Footer from '../components/Footer'; 
 import Header from '../components/Header';
+import Allapod from './Allapod';
 
 const apiKey = 'tycCgPBhOWJ9vRtLLfFHnkFYq3gB37Xqw1zdnC73';
 
@@ -147,6 +148,10 @@ export default function PictureOfDay() {
       
     </div>
   </div>
+</div>
+
+<div className='sm:py-10 px-4 sm:px-6 lg:px-16'>
+  <Allapod/>
 </div>
 
 <Footer navigation={navigation2} />
